@@ -20,7 +20,7 @@ const mailer = {
         from: `${contactForm.name} <${contactForm.email}>`, // sender address
         to: '', // wherever they want to recieve the emails, this could be the same as the sender
         subject: `${contactForm.subject}`, // Subject line
-        text: `${contactForm.message}` // plain text body
+        text: `${contactForm.message} ${contactForm.email}` // plain text body
         //html: '<b>Hello world?</b>' html body
     };
 
