@@ -1,0 +1,59 @@
+<div id="equipment" class="section md-padding bg-grey">
+  <!-- Container -->
+  <div class="container">
+      <!-- Row -->
+      <div class="row">
+          <!-- Section header -->
+          <div class="section-header text-center">
+              <h2 class="title">Featured Equipment</h2>
+          </div>
+          <!-- /Section header -->
+{{#each clients}}
+<!-- Equipment -->
+          <div class="col-xs-4 equip">
+              <!-- Equipment Image -->
+              <img class="img-responsive" src="{{this.picture_url}}" alt="{{this.name}}">
+              <!-- Equipment Overlay -->
+              <div class="overlay"></div>
+              <!-- Equipment Content -->
+              <div class="equip-content">
+                  <h3>{{this.name}}</h3>
+                  <!-- Equipment Link -->
+                  <div class="equip-link">
+                      <a data-toggle="modal" data-target="#{{this.id}}modal" ><i class="fa fa-search"></i></a>
+                  </div>
+                  <!-- /Equipment Link -->
+              </div>
+              <!-- /Equipment Content -->
+          </div>
+          <!-- /Equipment-->
+
+{{/each}}
+</div>
+{{#each clients}}
+<!-- Microphone Modal -->
+<div class="modal left fade" id="{{this.id}}modal" tabindex="-1" role="dialog" aria-labelledby="{{this.id}}modal">
+  <!-- Modal Dialog -->
+  <div class="modal-dialog" role="document">
+      <!-- Modal Content -->
+      <div class="modal-content">
+          <!-- Modal Header -->
+          <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title text-center" id="{{this.id}}modal">Test:</h4>
+          </div>
+          <!-- /Modal Header -->
+          <!-- Modal Body -->
+          <div class="modal-body">
+						{{!-- Microphones --}}
+						<h5 class="white-text">{{this.name}}</h5>
+						{{!-- /Microphones --}}
+          </div>
+          <!-- /Modal Body -->
+      </div>
+      <!-- /Modal Content -->
+  </div>
+  <!-- /Modal Dialog -->
+</div>
+<!-- /Microphone Modal -->
+{{/each}}
