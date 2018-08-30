@@ -18,9 +18,9 @@ const mailer = {
     // setup email data with unicode symbols
     let mailOptions = {
         from: `${contactForm.name} <${contactForm.email}>`, // sender address
-        to: '', // wherever they want to recieve the emails, this could be the same as the sender
+        to: 'cardinaltest21@gmail.com', // wherever they want to recieve the emails, this could be the same as the sender
         subject: `${contactForm.subject}`, // Subject line
-        text: `${contactForm.message} ${contactForm.email}` // plain text body
+        text: `Hey fuckhead! You got a new message from ${contactForm.email}. Here's the bullshit they said ${contactForm.message}` // plain text body
         //html: '<b>Hello world?</b>' html body
     };
 
