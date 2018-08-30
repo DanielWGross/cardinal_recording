@@ -1,3 +1,19 @@
+.service-after {
+    font-size: 12px;
+} 
+
+.about .service-after {
+    opacity: 0;
+    visibility: none;
+    display: none;
+}
+
+.about:hover .service-after {
+    visibility: visible;
+    display: inline;
+    opacity: 1;
+}
+
 /*
 Theme Name:
 Author: yaminncco
