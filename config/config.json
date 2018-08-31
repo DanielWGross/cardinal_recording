@@ -4,6 +4,7 @@
     "password": "root",
     "database": "cardinal_recording",
     "host": "localhost",
+    "port": 8889,
     "dialect": "mysql"
   },
   "test": {

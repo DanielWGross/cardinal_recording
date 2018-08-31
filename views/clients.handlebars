@@ -5,7 +5,7 @@
       <div class="row">
           <!-- Section header -->
           <div class="section-header text-center">
-              <h2 class="title">Featured Equipment</h2>
+              <h2 class="title">Clients:</h2>
           </div>
           <!-- /Section header -->
 {{#each clients}}
@@ -32,7 +32,7 @@
 </div>
 {{#each clients}}
 <!-- Microphone Modal -->
-<div class="modal left fade" id="{{this.id}}modal" tabindex="-1" role="dialog" aria-labelledby="{{this.id}}modal">
+<div class="modal" id="{{this.id}}modal" tabindex="-1" role="dialog" aria-labelledby="{{this.id}}modal">
   <!-- Modal Dialog -->
   <div class="modal-dialog" role="document">
       <!-- Modal Content -->
@@ -46,7 +46,7 @@
           <!-- Modal Body -->
           <div class="modal-body">
 						{{!-- Microphones --}}
-						<h5 class="white-text">{{this.name}}</h5>
+                        <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/413974059&color=%23bd2031&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
 						{{!-- /Microphones --}}
           </div>
           <!-- /Modal Body -->

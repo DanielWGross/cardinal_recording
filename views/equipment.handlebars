@@ -97,15 +97,16 @@
           <!-- Modal Header -->
           <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              <h4 class="modal-title text-center" id="workstationModal">Workstation:</h4>
+              <h3 class="modal-title text-center white-text" id="workstationModal">Workstation :</h4>
           </div>
           <!-- /Modal Header -->
           <!-- Modal Body -->
           <div class="modal-body">
+              <div class="overlay"></div>
           	{{!-- DAW --}}
 						<h5 class="white-text">Digital Audio Workstation:</h5>
 							<ul>
-									<li>Cubase Professional 8</li>
+							    <li>Cubase Professional 8</li>
 							</ul>
 						{{!-- /DAW --}}
 						{{!-- Interface --}}
@@ -156,87 +157,87 @@
           <!-- Modal Header -->
           <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              <h4 class="modal-title text-center" id="plugModal">Plugins & Pedals:</h4>
+              <h3 class="modal-title text-center white-text" id="plugModal">Plugins & Pedals:</h1>
           </div>
           <!-- /Modal Header -->
           <!-- Modal Body -->
           <div class="modal-body">
 						{{!-- Plugins : Effects--}}
-						<h5 class="white-text">Effects:</h5>
+						<h3 class="white-text">Effects:</h3>
 							<ul>
           			{{#each equipment}}
           	    	{{#if this.plugin_effects}}
-        		      	<li>{{this.name}}</li>
+        		      	<li><p class="white-text">{{this.name}}</p></li>
           	    	{{/if}}
           	  	{{/each}}
           		</ul>
 						{{!-- /Plugins : Effects --}}
 						{{!-- Plugins : Package --}}
-						<h5 class="white-text">Packages:</h5>
+						{{!-- <h3 class="white-text">Packages:</h3>
 							<ul>
             		{{#each equipment}}
             	    {{#if this.plugin_package}}
         	          <li>{{this.name}}</li>
                   {{/if}}
-                {{/each}}
+                {{/each}} --}}
               </ul>
 					  {{!-- /Plugins : Package --}}
 						{{!-- Plugins : Waves --}}
-						<h5 class="white-text">WAVES:</h5>
+						<h3 class="white-text">WAVES:</h3>
 							<ul>
             		{{#each equipment}}
             	    {{#if this.plugin_waves}}
-        	          <li>{{this.name}}</li>
+                        <li><p class="white-text">{{this.name}}</p></li>
                   {{/if}}
                 {{/each}}
               </ul>
 						{{!-- /Plugins : Waves --}}
 						{{!-- Plugins : Slate Digital --}}
-						<h5 class="white-text">Slate Digital:</h5>
+						<h3 class="white-text">Slate Digital:</h3>
 							<ul>
             		{{#each equipment}}
             	    {{#if this.plugin_slate_digital}}
-        	          <li>{{this.name}}</li>
+                        <li><p class="white-text">{{this.name}}</p></li>
                   {{/if}}
                 {{/each}}
               </ul>
 						{{!-- /Plugins : Slate Digital --}}
 						{{!-- Plugins : Fab Filter --}}
-						<h5 class="white-text">Fab Filter:</h5>
+						<h3 class="white-text">Fab Filter:</h3>
 							<ul>
             		{{#each equipment}}
             	    {{#if this.plugin_fab_filter}}
-        	          <li>{{this.name}}</li>
+                        <li><p class="white-text">{{this.name}}</p></li>
                   {{/if}}
                 {{/each}}
               </ul>
 						{{!-- /Plugins : Fab Filter --}}
 						{{!-- Plugins : Izotope --}}
-						<h5 class="white-text">Izotope:</h5>
+						<h3 class="white-text">Izotope:</h3>
 							<ul>
             		{{#each equipment}}
             	    {{#if this.plugin_izotope}}
-        	          <li>{{this.name}}</li>
+        	          <li><p class="white-text">{{this.name}}</p></li>
                   {{/if}}
                 {{/each}}
               </ul>
 						{{!-- /Plugins: Izotope --}}
 						{{!-- Plugins: Sound Toys --}}
-						<h5 class="white-text">Sound Toys:</h5>
+						<h3 class="white-text">Sound Toys:</h3>
 							<ul>
             		{{#each equipment}}
             	    {{#if this.plugin_soundtoys}}
-        	          <li>{{this.name}}</li>
+        	          <li><p class="white-text">{{this.name}}</p></li>
                   {{/if}}
                 {{/each}}
               </ul>
 						{{!-- /Plugins: Sound Toys --}}
 						{{!-- Pedals --}}
-						<h5 class="white-text">Pedals:</h5>
+						<h3 class="white-text">Pedals:</h3>
 							<ul>
             		{{#each equipment}}
             	    {{#if this.pedal}}
-        	          <li>{{this.name}}</li>
+        	          <li><p class="white-text">{{this.name}}</p></li>
                   {{/if}}
                 {{/each}}
               </ul>
