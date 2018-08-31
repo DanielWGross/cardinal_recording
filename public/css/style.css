@@ -860,9 +860,9 @@ Equipment Modal
   .modal-content {
     border-radius: 0;
     border: none;
-    background-color: #666666;
-    color:#fff;
+    background-color: #484848;
   }
+
   
   .modal-header {
     border-bottom-color: #10161A;
@@ -870,14 +870,17 @@ Equipment Modal
   }
 
   .modal-body li {
-    list-style-type: disc;
-    margin-left: 15px;
+    list-style-type: none;
   }
 
-  .modal-body h5 {
+  .modal-body ul {
+      margin-top: 24px;
+      margin-bottom: 24px;
+  }
+
+  .modal-body h3 {
       margin-top: 10px;
       margin-bottom: 10px;
-      color: #10161A;
   }
 
 /*------------------------------------*\
