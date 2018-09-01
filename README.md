@@ -1,35 +1,40 @@
-# Git Workflow
+# ![WebApp](https://github.com/DanielWGross/cardinal_Recording/blob/master/public/img/cardinal_snippet.JPG)
 
-### Make sure you are on master
-`git checkout master`
+## Description
+ Since 2008, Cardinal Recordings has connected musicians to a full service professional recording studio located in the suburbs of Philadelphia. In the recording studio musicians have access to the highest quality instruments, drums, amplifiers, microphones, and recording software plugins. Cardinal Recordings is operated by the talented producer and engineer Mike Weiser alongside Steve Angello.
 
-### Pull the most up-to-date from GitHub
-`git pull origin master`
+## Live Preview
+ [CLICK HERE](https://warm-gorge-70437.herokuapp.com/)
 
-### To see all branches from all users
-`git branch -r`
+## Author(s)
+  - [Angela Andrews](https://github.com/angela-andrews) (Front-end / Design)
+  - [Kyle Carney](https://github.com/kylecarney) (Front-end / Design )
+  - [Dan Gross](https://github.com/danielwgross) (Back-end / Testing / Project Management)
+  - [Colin McCafferty](https://github.com/mccaffertycr) (Back-end / Testing / Routing)
+  - [Kayla Smart](https://github.com/kaylasmart) (Front-end / Design)
 
-### To keep your local repo in sync with other branches.
-This will help remove branches that no longer exist.
-`git fetch -p`
+## Technologies Used
 
-### Create a new branch & check it out
-`git checkout -b my-new-branch`
+  ### Front-end  
+  - Bootstrap
+  - Handlebars
+  - CSS
 
-### Add your files to be commited
-`git add .`
+  ### Back-end
+  - Nodejs
+  - Express
+  - Sequelize
+  - Passport
 
-### Add a meanignful commit message
-`git commit -m "your message here"`
+  ### Database
+  - MySQL
 
-### Closing an issue using a commit message
-On the GitHub page find the issue number that you want to close and add it in the commit message with the keyword "closes"
+  ### Testing
+  - Travis CI
 
-`git commit -m "closes #123"`
+  ### Deployment
+  - Heroku
 
-### Push your branch to GitHub
-`git push origin my-new-branch`
-
-### To Delete your branch from the local repo
-`git branch -d my-new-branch`
-
+---
+## License & Copyright
+© Angela Andrews, Kyle Carney, Dan Gross, Connor McCafferty, Kayla Smart - Penn LPS Full Stack Coding Bootcamp 2018
