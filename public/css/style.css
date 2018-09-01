@@ -599,16 +599,13 @@ header {
 
 #home {
     height: 100vh;
-
-
 }
 
-#home-client-hero{
+#home-contact {
     height: 70vh;
-   
 }
 
-#home-client-hero  .home-wrapper {
+.home-wrapper {
     position: absolute;
     left: 0px;
     right: 0px;
@@ -631,33 +628,6 @@ header {
     transform: translateY(-50%);
     text-align: center;
 }
-
-.home-content h1 {
-  text-transform: uppercase;
-}
-.home-content button {
-  margin-top: 20px;
-}
-
-.header-wrapper h2 {
-    display: inline-block;
-    margin-bottom: 0px;
-}
-
-.header-wrapper .breadcrumb {
-    float: right;
-    background: transparent;
-    margin-bottom: 0px;
-}
-
-.header-wrapper .breadcrumb .breadcrumb-item.active {
-    color: #868F9B;
-}
-
-.breadcrumb>li+li:before {
-    color: #868F9B;
-}
-
 
 /*------------------------------------*\
 	About
@@ -1110,7 +1080,7 @@ Equipment Modal
 }
 
 .contact i {
-    font-size: 36px;
+    font-size: 100px;
     color: #bd2031;
     margin-bottom: 20px;
 }
