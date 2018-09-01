@@ -177,12 +177,13 @@ VALUES  ('Sans Amp : D.I.', 1),
         ('Ebow', 1);
 
 -- Client(s):
-
 INSERT INTO Clients (name, picture_url, soundcloud_url)
-VALUES  ('Andorra', "img/andorra.jpg", "https://soundcloud.com/cardinal-recordings/elephants"),
-        ('Daddylap', "img/daddylap.jpg", "https://soundcloud.com/cardinal-recordings/submerged?in=cardinal-recordings/sets/clients"),
-        ('Here : Now', "img/here_now.jpg", "https://soundcloud.com/cardinal-recordings/dont-move?in=cardinal-recordings/sets/clients"),
-        ('Steve Sheets', "img/steve_sheets.jpg", "https://soundcloud.com/cardinal-recordings/all-i-know?in=cardinal-recordings/sets/clients"),
-        ('Taking October', "img/taking_october.jpg", "https://soundcloud.com/cardinal-recordings/bullet-dreams"),
-        ('Andorra: Etc, Etc, Etc', "img/andorra_2.jpg", "https://soundcloud.com/cardinal-recordings/elephants"),
-        ('Taking October: Sleeping With Ghosts', "img/taking_october_2.jpg", "https://soundcloud.com/cardinal-recordings/bullet-dreams");
+VALUES  ('Hartline', 'img/hartline.png', 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/493214910&color=%23bd2031&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true'),
+        ('Taking October: Mistakes & Tragedies', "img/taking_october_2.jpg", 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/413974059&color=%23bd2031&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true'),
+        ('Here : Now', "img/here_now.jpg", 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/379102163&color=%23bd2031&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true'),
+        ('Andorra : What You Wanted', 'img/andorra_wyw.jpg', 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/493214874&color=%23bd2031&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true'),
+        ('Andorra : What You Got', 'img/andorra_wyg.jpg', 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/379102193&color=%23bd2031&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true'),
+        ('Steve Sheets', "img/steve_sheets.jpg", 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/379102151&color=%23bd2031&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true'),
+        ('Daddylap', "img/daddylap.jpg", 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/379102184&color=%23bd2031&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true'),
+        ('Andorra : etc, etc, etc...', 'img/andorra_2.jpg', 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/379102193&color=%23bd2031&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true'),
+        ('Taking October : Sleeping with Ghosts', "img/taking_october.jpg", 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/493214898&color=%23bd2031&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true');

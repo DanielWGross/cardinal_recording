@@ -605,6 +605,10 @@ header {
     height: 70vh;
 }
 
+#home-services {
+    height: 70vh;
+}
+
 .home-wrapper {
     position: absolute;
     left: 0px;
