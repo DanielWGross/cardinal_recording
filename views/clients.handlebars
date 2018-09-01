@@ -1,3 +1,68 @@
+<body>
+  <!-- Header -->
+	<header id="home-services">
+		<!-- Background Image -->
+		<div class="bg-img img-responsive" style="background-image: url('/img/client_bg.png');">
+		</div>
+		<!-- /Background Image -->
+
+		<!-- Nav -->
+		<nav id="nav" class="navbar nav-transparent">
+			{{!-- Container --}}
+			<div class="container">
+				{{!-- Navbar Header --}}
+				<div class="navbar-header">
+					<!-- Logo -->
+					<div class="navbar-brand">
+						<a href="/">
+							<img class="logo" src="img/logo_red.png" alt="logo">
+							<img class="logo-alt" src="img/logo_red.png" alt="logo">
+						</a>
+					</div>
+					<!-- /Logo -->
+					<!-- Collapse Nav Button -->
+					<div class="nav-collapse">
+						<span></span>
+					</div>
+					<!-- /Collapse nav button -->
+				</div>
+				{{!-- /Navbar Header --}}
+				<!--  Main navigation  -->
+				<ul class="main-nav nav navbar-nav navbar-right">
+					<li><a href="/">Home</a></li>
+					<li><a href="/clients">Clients</a></li>
+					<li><a href="/equipment">Equipment</a></li>
+					<li><a href="/contact">Contact</a></li>					
+				</ul>
+				<!-- /Main navigation -->
+			</div>
+			{{!-- /Container --}}
+		</nav>
+		<!-- /Nav -->
+
+		<!-- Home Wrapper -->
+		<div class="home-wrapper">
+			{{!-- Container --}}
+			<div class="container">
+				{{!-- Row --}}
+				<div class="row">
+					<!-- Home Content -->
+					<div class="col-md-10 col-md-offset-1">
+						<div class="home-content">
+							{{!-- <h1 class="white-text">Cardinal Recording</h1> --}}
+							<img src="img/logo_white.png" class="img-responsive">
+						</div>
+					</div>
+					<!-- /Home Content -->
+				</div>
+				{{!-- /Row --}}
+			</div>
+			{{!-- /Container --}}
+		</div>
+		{{!-- Home Wrapper --}}
+	</header>
+	{{!-- /Header --}}
+
 <div id="equipment" class="section md-padding bg-grey">
   <!-- Container -->
   <div class="container">
@@ -40,15 +105,11 @@
           <!-- Modal Header -->
           <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              <h4 class="modal-title text-center" id="{{this.id}}modal">Test:</h4>
+              <h4 class="modal-title text-center white-text" id="{{this.id}}modal">{{this.name}} :</h4>
           </div>
           <!-- /Modal Header -->
           <!-- Modal Body -->
-          <div class="modal-body">
-						{{!-- Microphones --}}
-                        <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/413974059&color=%23bd2031&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
-						{{!-- /Microphones --}}
-          </div>
+          <div class="modal-body"> <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src={{this.soundcloud_url}}></iframe></div>
           <!-- /Modal Body -->
       </div>
       <!-- /Modal Content -->
