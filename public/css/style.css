@@ -15,9 +15,6 @@
 }
 
 /*
-Theme Name:
-Author: yaminncco
-
 Colors:
 	Body 		  : #868F9B
 	Headers 	: #10161A
@@ -36,14 +33,10 @@ Table OF Contents
 5 > About
 6 > Equipment
 7 > Services
-8 >  Why choose us
-9 >  Numbers
-10 > Pricing
 10.5 > Services (addition)
 16 > Contact
 17 > Footer
 18 > Responsive
-19 > Owl theme
 20 > Back to top
 21 > Preloader
 
@@ -601,11 +594,7 @@ header {
     height: 100vh;
 }
 
-#home-contact {
-    height: 70vh;
-}
-
-#home-services {
+#home-contact, #home-services, #home-equip {
     height: 70vh;
 }
 
@@ -837,7 +826,6 @@ Equipment Modal
     background-color: #484848;
   }
 
-  
   .modal-header {
     border-bottom-color: #10161A;
     background-color: #bd2031;
@@ -904,177 +892,6 @@ Equipment Modal
 }
 
 /*------------------------------------*\
-	Why choose us
-\*------------------------------------*/
-
-.feature {
-    margin: 15px 0px;
-}
-.feature i {
-    float: left;
-    padding: 5px;
-    border-radius: 50%;
-    color: #bd2031;
-    border: 1px solid #bd2031;
-    margin-right: 5px;
-}
-/* 
-#about {
-  background:rgba(top, 254,254,254,1) 20%;
-  background: linear-gradient(rgb(254, 253, 253) 15%, rgba(149,148,149,1) 45%, rgba(8,7,8,1) 89%);
-  } */
-
-/*------------------------------------*\
-	Numbers
-\*------------------------------------*/
-
-.number {
-    text-align: center;
-    margin: 15px 0px;
-}
-
-.number i {
-    color: #bd2031;
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-.number h3 {
-    font-size: 36px;
-    margin-bottom: 10px;
-}
-
-
-/*------------------------------------*\
-	Pricing
-\*------------------------------------*/
-
-.pricing {
-    position: relative;
-    text-align: center;
-    border: 1px solid #EEE;
-    background-color: #FFF;
-    z-index: 11;
-    margin: 15px 0px;
-}
-
-.pricing::after {
-    content: "";
-    background-color: #1C1D21;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    height: 0%;
-    z-index: -1;
-    -webkit-transition: 0.2s height;
-    transition: 0.2s height;
-}
-
-.pricing:hover:after {
-    height: 100%;
-}
-
-.pricing .price-head {
-    position: relative;
-    margin-bottom: 20px;
-}
-
-.pricing .price-title {
-    display: block;
-    padding: 40px 0px 20px;
-    text-transform: uppercase;
-    -webkit-transition: 0.2s color;
-    transition: 0.2s color;
-}
-
-.pricing:hover .price-title {
-    color: #bd2031;
-}
-
-.pricing .price {
-    position: relative;
-    width: 140px;
-    height: 140px;
-    line-height: 140px;
-    text-align: center;
-    margin: auto;
-    border-radius: 50%;
-    border: 2px solid #bd2031;
-}
-
-.pricing .price h3 {
-  font-size: 42px;
-  margin: 0px;
-  -webkit-transition: 0.2s color;
-  transition: 0.2s color;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
-  top: 50%;
-  position: absolute;
-  left: 0;
-  right: 0;
-}
-
-.pricing:hover .price h3 {
-    color: #fff;
-}
-
-.pricing .duration {
-    display: block;
-    font-size: 14px;
-    text-transform: uppercase;
-    color: #10161A;
-    -webkit-transition: 0.2s color;
-    transition: 0.2s color;
-}
-
-.pricing:hover .duration {
-    color: #fff;
-}
-
-.pricing .price-btn {
-    padding-top: 20px;
-    padding-bottom: 40px;
-}
-
-/*------------------------------------*\
-	Services
-\*------------------------------------*/
-
-.services {
-    margin: 15px 0px;
-}
-
-.services-meta {
-    position: relative;
-    padding-left: 90px;
-    height: 70px;
-    margin-bottom: 20px;
-    padding-top: 10px;
-}
-
-.services img {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 70px !important;
-    height: 70px !important;
-    border-radius: 50%;
-}
-
-.services h3 {
-    margin-bottom: 5px;
-}
-
-.services span {
-    font-size: 14px;
-    color: #bd2031;
-    text-transform: uppercase;
-}
-
-/*------------------------------------*\
 	Contact
 \*------------------------------------*/
 
@@ -1119,15 +936,6 @@ input:invalid {
     position: relative;
 }
 
-.footer-logo {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.footer-logo>a>img {
-    max-height: 80px;
-}
-
 .footer-follow {
     text-align: center;
     margin-bottom: 20px;
@@ -1150,18 +958,9 @@ input:invalid {
   color:#FFF;
 }
 
-.footer-copyright p {
-    text-align: center;
-    font-size: 14px;
-    text-transform: uppercase;
-    margin: 0;
-}
-
-
 /*------------------------------------*\
 	Responsive
 \*------------------------------------*/
-
 
 @media only screen and (max-width: 991px) {}
 
@@ -1174,21 +973,6 @@ input:invalid {
   		padding: 8px 22px;
   		font-size:14px;
 	}
-
-  .home-content h1 {
-		font-size:36px;
-	}
-
-  .header-wrapper h2 {
-      margin-bottom: 20px;
-      text-align: center;
-      display: block;
-  }
-
-  .header-wrapper .breadcrumb {
-      float: none;
-      text-align: center;
-  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -1206,38 +990,7 @@ input:invalid {
   .contact-form .input:nth-child(2) {
       margin-left: 0px;
   }
-
-  .reply-form form .input, .reply-form form .input {
-      width: 100%;
-  }
-  .reply-form form .input:nth-child(2) {
-      margin-left: 0px;
-  }
-
-
-
-  .blog-author .media .media-left {
-      display: block;
-      padding-right: 0;
-      margin-bottom: 20px;
-  }
-  .blog-author .media {
-      text-align: center;
-  }
-  .blog-author .media .media-heading .author-social {
-      margin-top: 10px;
-      float: none;
-  }
-  .blog-author .media .media-left img {
-      margin: auto;
-  }
-
-  .blog-comments .media .media {
-      margin:0px -15px;
-  }
 }
-
-
 
 /*------------------------------------*\
 	Back to top
@@ -1274,7 +1027,6 @@ input:invalid {
 /*------------------------------------*\
 	Preloader
 \*------------------------------------*/
-
 
 #preloader {
     position: fixed;
