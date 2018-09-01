@@ -1133,6 +1133,10 @@ Equipment Modal
     margin-left: 15px;
 }
 
+input:invalid {
+    border: 2px dashed #bd2031;
+  }
+
 /*------------------------------------*\
 	Footer
 \*------------------------------------*/
