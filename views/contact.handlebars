@@ -1,20 +1,80 @@
 
+<body>
+  <!-- Header -->
+	<header id="home-contact">
+		<!-- Background Image -->
+		<div class="bg-img img-responsive" style="background-image: url('/img/snare.png');"></div>
+		<!-- /Background Image -->
+
+		<!-- Nav -->
+		<nav id="nav" class="navbar nav-transparent">
+			{{!-- Container --}}
+			<div class="container">
+				{{!-- Navbar Header --}}
+				<div class="navbar-header">
+					<!-- Logo -->
+					<div class="navbar-brand">
+						<a href="/">
+							<img class="logo" src="img/logo_red.png" alt="logo">
+							<img class="logo-alt" src="img/logo_red.png" alt="logo">
+						</a>
+					</div>
+					<!-- /Logo -->
+					<!-- Collapse Nav Button -->
+					<div class="nav-collapse">
+						<span></span>
+					</div>
+					<!-- /Collapse nav button -->
+				</div>
+				{{!-- /Navbar Header --}}
+				
+				<!--  Main navigation  -->
+				<ul class="main-nav nav navbar-nav navbar-right">
+					<li><a href="/">Home</a></li>
+					<li><a href="/clients">Clients</a></li>
+					<li><a href="/equipment">Equipment</a></li>
+					<li><a href="/contact">Contact</a></li>					
+				</ul>
+				<!-- /Main navigation -->
+			</div>
+			{{!-- /Container --}}
+		</nav>
+		<!-- /Nav -->
+
+		<!-- Home Wrapper -->
+		<div class="home-wrapper">
+			{{!-- Container --}}
+			<div class="container">
+				{{!-- Row --}}
+				<div class="row">
+					<!-- Home Content -->
+					<div class="col-md-10 col-md-offset-1">
+						<div class="home-content">
+							<img src="img/logo_white.png" class="img-responsive">
+						</div>
+					</div>
+					<!-- /Home Content -->
+				</div>
+				{{!-- /Row --}}
+			</div>
+			{{!-- /Container --}}
+		</div>
+		{{!-- Home Wrapper --}}
+	</header>
+	{{!-- /Header --}}
+
 
 	<!-- Contact -->
 	<div id="contact" class="section md-padding">
-
 		<!-- Container -->
 		<div class="container">
-
 			<!-- Row -->
 			<div class="row">
-
 				<!-- Section-header -->
 				<div class="section-header text-center">
 					<h2 class="title">Get in touch</h2>
 				</div>
 				<!-- /Section-header -->
-
 				<!-- contact -->
 				<div class="col-sm-4">
 					<div class="contact">
@@ -24,7 +84,6 @@
 					</div>
 				</div>
 				<!-- /contact -->
-
 				<!-- contact -->
 				<div class="col-sm-4">
 					<div class="contact">
@@ -34,7 +93,6 @@
 					</div>
 				</div>
 				<!-- /contact -->
-
 				<!-- contact -->
 				<div class="col-sm-4">
 					<div class="contact">
@@ -44,38 +102,21 @@
 					</div>
 				</div>
 				<!-- /contact -->
-
 				<!-- contact form -->
 				<div class="col-md-8 col-md-offset-2">
-					<form class="contact-form">
-						<input type="text" class="input" id="name" placeholder="john doe" required title="Must enter a name">
-						<input type="email" class="input" id="email" placeholder="email@example.com" required title="Must enter a valid email">
-						<input type="text" class="input" id="subject" placeholder="Subject">
-						<textarea class="input" id="message" placeholder="Message" required title="Must enter a message"></textarea>
+					<form class="contact-form" novalidate>
+						<input type="text" class="input" id="name" placeholder="John Doe" required>
+						<input type="email" class="input" id="email" placeholder="EMAIL@EXAMPLE.COM" required>
+						<input type="text" class="input" id="subject" placeholder="Subject" required>
+						<textarea class="input" id="message" placeholder="Message" required></textarea>
 						<input class="main-btn" value="Send Message" type="submit">
 					</form>
 				</div>
 				<!-- /contact form -->
-
-        <!-- chat form -->
-           <div class='container'>
-              <div class= 'row'>
-                  <div class='.col-md-6 .offset-md-3'>
-                    <div class= "chatBox" style="background-color: yellow,height: 30px;"></div>
-                  </div>
-
-              </div>
-
-           </div>
-
-        <!-- /chat form -->
-
 			</div>
 			<!-- /Row -->
-
 		</div>
 		<!-- /Container -->
-
 	</div>
 	<!-- /Contact -->
 

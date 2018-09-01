@@ -4,8 +4,11 @@ const autoMailer = require('../controllers/mailer');
 module.exports = (app) => {
   // POST Contact Form
   app.post('/contact', (req, res) => {
-    console.log(req.body);
-    autoMailer.sendEmail(req.body)
+    new Promise(resolve => {
+      autoMailer.sendEmail(req.body, resolve)
+    }).then((mailSent) => {
+      res.json(mailSent);
+    });
   });
   // GET All Equipment
   app.get('/api/equipment', (req, res) => {
