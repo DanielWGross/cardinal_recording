@@ -28,6 +28,7 @@ module.exports = (app) => {
           raw: true
         }).then((clients) => {
           res.render('clients', {
+            layout: false,
             clients: clients
           });
         });
