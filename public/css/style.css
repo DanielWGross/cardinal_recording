@@ -19,6 +19,12 @@
     align-items: center;
 }
 
+.insta-photo {
+    position: relative;
+    padding: 8px 16px;
+}
+
+
 /*
 Colors:
 	Body 		  : #868F9B
