@@ -1,5 +1,11 @@
 const db = require('../models');
 const autoMailer = require('../controllers/mailer');
+const Instagram = require('node-instagram').default;
+const instagram = new Instagram({
+  clientId: process.env.INSTAGRAM_CLIENT_ID,
+  clientSecret: process.env.INSTAGRAM_SECRET
+});
+const redirectUri = 'http://localhost:3000/auth/instagram/callback';
 
 module.exports = (app) => {
   // POST Contact Form
@@ -23,6 +29,17 @@ module.exports = (app) => {
     .then((dbClients) => {
       res.json(dbClients);
     });
+  });
+  app.get('/auth/instagram', (req, res) => {
+    res.redirect(instagram.getAuthorizationUrl(redirectUri, { scope: ['basic'] }));
+  });
+  app.get('/auth/instagram/callback', async (req,res) => {
+    try {
+      const data = await instagram.authorizeUser(req.query.code, redirectUri);
+      res.json(data);
+    } catch (err) {
+      res.json(err);
+    };
   });
 };
 // ---------------------------------------------------FUTURE ADMIN ROUTES------------------------------------------------------------------
