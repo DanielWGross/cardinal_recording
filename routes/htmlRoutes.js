@@ -6,10 +6,8 @@ module.exports = (app) => {
     new Promise(resolve => {
       instafeed.getPosts(resolve)
     }).then((posts) => {
-      res.render('index', {
-        posts: posts
-      })
-    })
+      res.render('index', { posts: posts })
+    });
   });
   // navigate between pages from the navbar
   app.get('/:page', (req, res) => {

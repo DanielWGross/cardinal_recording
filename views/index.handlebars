@@ -164,6 +164,25 @@
 {{!-- TESTING! --}}
 {{!-- TESTING! --}}
 {{!-- TESTING! --}}
-<div id="instagram">
-	<h1>{{posts.data.username}}</h1>
+<!-- About -->
+<div id="about" class="section md-padding">
+	<!-- Container -->
+	<div class="container">
+		<!-- Row -->
+		<div class="row">
+			<!-- Section header -->
+			<div class="section-header text-center">
+				<h2 class="title">Instagram</h2>
+			</div>
+			<!-- /Section header -->
+				{{#each posts}}
+					<div class="col-xs-2 equip">
+						<img class="insta-photo" src="{{this}}">
+					</div>
+				{{/each}}
+		</div>
+		<!-- /Row -->
+	</div>
+	<!-- /Container -->
 </div>
+<!-- /About -->
