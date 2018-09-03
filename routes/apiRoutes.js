@@ -6,8 +6,8 @@ const instagram = new Instagram({
   clientSecret: process.env.INSTAGRAM_SECRET
 });
 const redirectUri = 'http://localhost:3000/auth/instagram/callback';
-// const passportSetup = require('../controllers/passport');
-// const passport = require('passport');
+const passportSetup = require('../controllers/passport');
+const passport = require('passport');
 
 module.exports = (app) => {
   // POST Contact Form
@@ -46,29 +46,29 @@ module.exports = (app) => {
     };
   });
 
-  // app.get('/admin', (req, res) => {
-  //   res.render('admin', {
-  //     layout: false
-  //   });
-  // })
+  app.get('/admin', (req, res) => {
+    res.render('admin', {
+      layout: false
+    });
+  })
 
-  // app.get('/login', (req, res) => {
-  //   res.render('login', {
-  //     layout: false
-  //   });
-  // });
+  app.get('/login', (req, res) => {
+    res.render('login', {
+      layout: false
+    });
+  });
 
-  // app.get('/google', passport.authenticate('google', {
-  //   scope: ['profile']
-  // }));
+  app.get('/google', passport.authenticate('google', {
+    scope: ['profile']
+  }));
 
-  // app.get('/google/redirect', passport.authenticate('google'), (req, res) => {
-  //   res.send('You have reach the callback URI!');
-  // });
+  app.get('/google/redirect', passport.authenticate('google'), (req, res) => {
+    res.send('You have reach the callback URI!');
+  });
 
-  // app.get('/logout', (req, res) => {
-  //   // Handle with passport
-  //   res.send("logging out");
-  // });
+  app.get('/logout', (req, res) => {
+    // Handle with passport
+    res.send("logging out");
+  });
 
 };
