@@ -6,6 +6,8 @@ const instagram = new Instagram({
   clientSecret: process.env.INSTAGRAM_SECRET
 });
 const redirectUri = 'http://localhost:3000/auth/instagram/callback';
+const passportSetup = require('../controllers/passport');
+const passport = require('passport');
 
 module.exports = (app) => {
   // POST Contact Form
@@ -51,65 +53,17 @@ module.exports = (app) => {
       layout: false
     });
   });
-  app.get('/google', (req, res) => {
-    // Handle with passport
-    res.send("logging in with google");
+  app.get('/google', passport.authenticate('google', {
+    scope: ['profile']
+  }));
+
+  app.get('/google/redirect', (req, res) => {
+    res.send('You have reach the callback URI!');
   });
+
   app.get('/logout', (req, res) => {
     // Handle with passport
     res.send("logging out");
   });
+
 };
-// ---------------------------------------------------FUTURE ADMIN ROUTES------------------------------------------------------------------
-  // app.post('/equipment/admin', (req, res) => {
-  //   db.Equipment.create(req.body).then((equipment) => {
-  //     res.json(equipment); // return result and append html on client side via jQuery
-  //                          // would be nice if this was a preview where the changes could be undone or edited 
-  //   });
-  // })
-
-//   app.put('/equipment/admin', (req, res) => {
-//     db.Equipment.update({
-//       x: y,
-//       where: {
-//         id: req.body.id
-//       }
-//     }).then((equipment) => {
-//       res.json(equipment); // "
-//     });
-//   })
-
-//   app.delete('/equipment/admin', (req, res) => {
-//     db.Equipment.destroy({
-//       where: {
-//         x: y
-//       }
-//     }).then((equipment) => {
-//       res.json(equipment); // "
-//     });
-//   });
-
-//   app.post('/clients/admin', (req, res) => {
-//     db.Client.create(req.body).then((dbExample) => {
-//       res.json(clients); 
-//     });
-//   });
-
-//   app.put('/clients/admin', (req, res) => {
-//     db.Client.update({
-//       x: y,
-//       where: {
-//         id: req.body.id
-//       }
-//     });
-//   });
-
-//   app.delete('/clients/admin', (req, res) => {
-//     db.Client.destroy({ 
-//       where: { 
-//         id: req.body.id 
-//       } 
-//     }).then((clients) => {
-//       res.json(clients);
-//     });
-//   });
