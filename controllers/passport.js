@@ -10,5 +10,6 @@ passport.use(
         clientSecret: process.env.GOOGLE_CLIENT_SECRET
     }, () => {
         // passport callback function
+        console.log('passport callback function fired')
     })
 );

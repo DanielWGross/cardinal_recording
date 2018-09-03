@@ -6,8 +6,8 @@ const instagram = new Instagram({
   clientSecret: process.env.INSTAGRAM_SECRET
 });
 const redirectUri = 'http://localhost:3000/auth/instagram/callback';
-const passportSetup = require('../controllers/passport');
-const passport = require('passport');
+// const passportSetup = require('../controllers/passport');
+// const passport = require('passport');
 
 module.exports = (app) => {
   // POST Contact Form
@@ -32,9 +32,11 @@ module.exports = (app) => {
       res.json(dbClients);
     });
   });
+
   app.get('/auth/instagram', (req, res) => {
     res.redirect(instagram.getAuthorizationUrl(redirectUri, { scope: ['basic'] }));
   });
+
   app.get('/auth/instagram/callback', async (req,res) => {
     try {
       const data = await instagram.authorizeUser(req.query.code, redirectUri);
@@ -43,27 +45,30 @@ module.exports = (app) => {
       res.json(err);
     };
   });
-  app.get('/admin', (req, res) => {
-    res.render('admin', {
-      layout: false
-    });
-  })
-  app.get('/login', (req, res) => {
-    res.render('login', {
-      layout: false
-    });
-  });
-  app.get('/google', passport.authenticate('google', {
-    scope: ['profile']
-  }));
 
-  app.get('/google/redirect', (req, res) => {
-    res.send('You have reach the callback URI!');
-  });
+  // app.get('/admin', (req, res) => {
+  //   res.render('admin', {
+  //     layout: false
+  //   });
+  // })
 
-  app.get('/logout', (req, res) => {
-    // Handle with passport
-    res.send("logging out");
-  });
+  // app.get('/login', (req, res) => {
+  //   res.render('login', {
+  //     layout: false
+  //   });
+  // });
+
+  // app.get('/google', passport.authenticate('google', {
+  //   scope: ['profile']
+  // }));
+
+  // app.get('/google/redirect', passport.authenticate('google'), (req, res) => {
+  //   res.send('You have reach the callback URI!');
+  // });
+
+  // app.get('/logout', (req, res) => {
+  //   // Handle with passport
+  //   res.send("logging out");
+  // });
 
 };
