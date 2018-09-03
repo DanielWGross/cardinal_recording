@@ -41,6 +41,24 @@ module.exports = (app) => {
       res.json(err);
     };
   });
+  app.get('/admin', (req, res) => {
+    res.render('admin', {
+      layout: false
+    });
+  })
+  app.get('/login', (req, res) => {
+    res.render('login', {
+      layout: false
+    });
+  });
+  app.get('/google', (req, res) => {
+    // Handle with passport
+    res.send("logging in with google");
+  });
+  app.get('/logout', (req, res) => {
+    // Handle with passport
+    res.send("logging out");
+  });
 };
 // ---------------------------------------------------FUTURE ADMIN ROUTES------------------------------------------------------------------
   // app.post('/equipment/admin', (req, res) => {
