@@ -2,7 +2,8 @@ require('dotenv').config();
 var express = require('express');
 var bodyParser = require('body-parser');
 var exphbs = require('express-handlebars');
-
+const cookieSession = require('cookie-session');
+const passport = require('passport');
 var db = require('./models');
 
 var app = express();
@@ -12,6 +13,12 @@ var PORT = process.env.PORT || 3000;
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(express.static('public'));
+app.use(cookieSession({
+  maxAge: 24 * 60 * 60 * 1000,
+  keys: [process.env.COOKIE_KEY]
+}));
+app.use(passport.initialize());
+app.use(passport.session());
 
 // Handlebars
 app.engine(
