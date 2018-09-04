@@ -9,6 +9,14 @@ const redirectUri = 'http://localhost:3000/auth/instagram/callback';
 const passportSetup = require('../controllers/passport');
 const passport = require('passport');
 
+const authCheck = (req, res, next) => {
+  if(!req.user) {
+    res.redirect('/');
+  } else {
+    next();
+  };
+};
+
 module.exports = (app) => {
   // POST Contact Form
   app.post('/contact', (req, res) => {
@@ -46,11 +54,12 @@ module.exports = (app) => {
     };
   });
 
-  app.get('/admin', (req, res) => {
+  app.get('/admin', authCheck, (req, res) => {
     res.render('admin', {
-      layout: false
+      layout: false,
+      user: req.user
     });
-  })
+  });
 
   app.get('/login', (req, res) => {
     res.render('login', {
@@ -63,7 +72,8 @@ module.exports = (app) => {
   }));
 
   app.get('/google/redirect', passport.authenticate('google'), (req, res) => {
-    res.send('You have reach the callback URI!');
+    // res.send(req.user);
+    res.redirect('/admin');
   });
 
   app.get('/logout', (req, res) => {
@@ -71,4 +81,5 @@ module.exports = (app) => {
     res.send("logging out");
   });
 
+  
 };
