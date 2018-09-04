@@ -72,13 +72,12 @@ module.exports = (app) => {
   }));
 
   app.get('/google/redirect', passport.authenticate('google'), (req, res) => {
-    // res.send(req.user);
     res.redirect('/admin');
   });
 
   app.get('/logout', (req, res) => {
-    // Handle with passport
-    res.send("logging out");
+    req.logout();
+    res.redirect('/');
   });
 
   
