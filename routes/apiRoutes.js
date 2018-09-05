@@ -33,13 +33,7 @@ module.exports = (app) => {
       res.json(dbEquipment);
     });
   });
-  // GET All Clients
-  app.get('/api/clients', (req, res) => {
-    db.Client.findAll({})
-    .then((dbClients) => {
-      res.json(dbClients);
-    });
-  });
+
 
   app.get('/auth/instagram', (req, res) => {
     res.redirect(instagram.getAuthorizationUrl(redirectUri, { scope: ['basic'] }));
@@ -80,5 +74,19 @@ module.exports = (app) => {
     res.redirect('/');
   });
 
+  app.get('/admin/clients', (req, res) => {
+    db.Client.findAll({})
+    .then((dbClients) => {
+      res.render('manage_clients', {
+        layout: false,
+        clients: dbClients
+      })
+    });
+  });
   
+  app.get('/admin/equipment', (req, res) => {
+    res.render('manage_equipment', {
+      layout: false
+    });
+  });
 };

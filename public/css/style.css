@@ -24,7 +24,9 @@
     padding: 8px 16px;
 }
 
-
+.client-container {
+    margin-top: 24px;
+}
 /*
 Colors:
 	Body 		  : #868F9B

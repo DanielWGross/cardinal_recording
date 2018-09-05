@@ -36,6 +36,10 @@
                 padding: 0 10px;
                 color: #333;
             }
+            .manage {
+                color: #bd2031;
+                font-size: 24px;
+            }
         </style>
     </head>
     <body>
@@ -51,7 +55,13 @@
             <h1>Cardinal Recordings Admin Page</h1>
         </header>
         <main>
-            <p>Welcome to your page {{user.display_name}}</p>
+            <p>Welcome to your page {{user.display_name}}. What do you want to do?</p>
+            <ul>
+                <li><a class="manage" href="/admin/clients">Manage Clients</a></li>
+                <li><a class="manage" href="/admin/equipment">Manage Equipment</a></li>
+            </ul>
+            
+            
         </main>
     </body>
 </html>
