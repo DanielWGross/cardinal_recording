@@ -348,6 +348,16 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
     /* border-bottom: 1px solid #EEE; */
 }
 
+#nav.fixed-tweak {
+    position: fixed;
+    left: 0;
+    right: 0;
+    padding: 0px 0px;
+    background: transparent !important;
+    color: #fff;
+    /* transition: 0.2s all; */
+    /* border-bottom: 1px solid #EEE; */
+}
 #nav.nav-transparent {
     background: transparent;
 }
