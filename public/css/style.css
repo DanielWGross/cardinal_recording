@@ -24,7 +24,14 @@
     padding: 8px 16px;
 }
 
+.client-container {
+    margin-top: 24px;
+}
 
+.delete-client {
+    cursor: pointer !important;
+    color: #bd2031 !important;
+}
 /*
 Colors:
 	Body 		  : #868F9B
