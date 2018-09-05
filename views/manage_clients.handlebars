@@ -33,6 +33,7 @@
                 <th>Picture URL</th>
 								<th>SoundCloud URL</th>
 								<th>Delete Client</th>
+								<th>Edit Client</th>
 							</tr>
 						</thead>
             <tbody>
@@ -41,8 +42,11 @@
                   <th scope="row">{{this.id}}</th>
                   <td>{{this.name}}</td>
                   <td>{{this.picture_url}}</td>
-                  <td>COMING SOON</td>
+                  {{!-- <td>{{this.soundcloud_url}}</td> --}}
+									{{!-- <td>COMING SOON!</td> --}}
+                  <td><a href="{{this.soundcloud_url}}"class='sound-client'>Soundcloud Link</a></td>
                   <td><a class='delete-client'>Delete Client</a></td>
+									<td><a class='edit-client'>Edit Client</a></td>
                 </tr>
               {{/each}}
             </tbody>

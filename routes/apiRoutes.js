@@ -26,6 +26,20 @@ module.exports = (app) => {
       res.json(mailSent);
     });
   });
+
+  app.get('/delete/:id', (req, res) => {
+    db.Client.findOne({
+      where: {
+        id: req.params.id
+      }
+    }).then((dbClient) => {
+      res.render('delete_client', {
+        layout: false,
+        client: dbClient
+      })
+    })
+  })
+
   // GET All Equipment
   app.get('/api/equipment', (req, res) => {
     db.Equipment.findAll({

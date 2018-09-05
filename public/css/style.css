@@ -1,3 +1,5 @@
+
+
 .service-after {
     font-size: 12px;
 } 
@@ -32,6 +34,17 @@
     cursor: pointer !important;
     color: #bd2031 !important;
 }
+
+.edit-client {
+    cursor: pointer !important;
+    color: #ffc600 !important;
+}
+
+.sound-client {
+    cursor: pointer !important;
+    color: #5bc0de;
+}
+
 /*
 Colors:
 	Body 		  : #868F9B
