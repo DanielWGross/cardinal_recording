@@ -30,17 +30,19 @@
 							<tr>
 								<th>ID</th>
 								<th>Client Name</th>
+                <th>Picture URL</th>
 								<th>SoundCloud URL</th>
 								<th>Delete Client</th>
 							</tr>
 						</thead>
             <tbody>
               {{#each clients}}
-                <tr>
+                <tr data-id="{{this.id}}">
                   <th scope="row">{{this.id}}</th>
                   <td>{{this.name}}</td>
-                  <td>{{this.soundcloud_url}}</td>
-                  <td>Delete</td>
+                  <td>{{this.picture_url}}</td>
+                  <td>COMING SOON</td>
+                  <td><a class='delete-client'>Delete Client</a></td>
                 </tr>
               {{/each}}
             </tbody>
@@ -50,7 +52,7 @@
 			</div>
 		</div>
 	</div>
-
+<script type="text/javascript" src="/js/adminClients.js"></script>
 </body>
 
 </html>
