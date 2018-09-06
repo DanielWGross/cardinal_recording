@@ -24,8 +24,7 @@ Array.from(deleteNodeList).forEach(button => {
     const deleteID = {
       id: button.parentElement.parentElement.dataset.id
     };
-    API.postAPI(deleteID)
-    .then(res => {
+    API.postAPI(deleteID).then(res => {
       window.location.href = "/admin";
     });
   });

@@ -37,6 +37,8 @@ module.exports = (app) => {
       where: {
         id: req.params.id
       }
+    }).then(dbUpdate => {
+      res.json(dbUpdate);
     })
   });
 
@@ -45,7 +47,9 @@ module.exports = (app) => {
       where: {
         id: req.body.id
       }
-    });
+    }).then(dbDestroy => {
+      res.json(dbDestroy);
+    })
   });
 
   app.get('/edit/:id', (req, res) => {

@@ -29,8 +29,15 @@ const handleSubmit = (event => {
   };
   // Call the postAPI method to send updated client to DB
   API.postAPI(clientID, updatedClient)
-  .then(res => console.log('Yo you did it!'));
+  .then(res => window.location.href = "/admin");
+});
+
+// Logic to handle the click event on cancel button
+const handleCancel = (event => {
+  event.preventDefault();
+  window.location.href = "/admin";
 });
 
 // Event Handler
 submitButton.addEventListener("click", handleSubmit);
+cancelButton.addEventListener("click", handleCancel);
