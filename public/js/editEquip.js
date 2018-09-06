@@ -6,7 +6,7 @@ const submitButton = document.querySelector(".submit");
 // The API object contains methods for each kind of request we will make.
 const API = {
   postAPI: function(id, data) {
-    return fetch( `/edit/client/${id}`, {
+    return fetch( `/edit/equip/${id}`, {
       method: "POST",
       headers: {
         'Accept': 'application/json',
@@ -21,14 +21,12 @@ const API = {
 const handleSubmit = (event => {
   event.preventDefault();
   // Create object for updated client information
-  const clientID = document.querySelector("#id").value.trim();
-  const updatedClient = {
+  const equipID = document.querySelector("#id").value.trim();
+  const updatedEquip = {
     name: document.querySelector("#name").value.trim(),
-    picture: document.querySelector("#picture").value.trim(),
-    soundcloud: document.querySelector("#soundcloud").value.trim()
   };
   // Call the postAPI method to send updated client to DB
-  API.postAPI(clientID, updatedClient)
+  API.postAPI(equipID, updatedEquip)
   .then(res => window.location.href = "/admin");
 });
 

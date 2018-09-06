@@ -27,7 +27,7 @@ module.exports = (app) => {
     });
   });
 
-  app.post('/edit/:id', (req, res) => {
+  app.post('/edit/client/:id', (req, res) => {
     db.Client.update({
       name: req.body.name,
       picture_url: req.body.picture,
@@ -42,7 +42,20 @@ module.exports = (app) => {
     })
   });
 
-  app.post('/delete/:id', (req,res) => {
+  app.post('/edit/equip/:id', (req, res) => {
+    db.Equipment.update({
+      name: req.body.name,
+    },
+    { 
+      where: {
+        id: req.params.id
+      }
+    }).then(dbUpdate => {
+      res.json(dbUpdate);
+    })
+  });
+
+  app.post('/delete/client/:id', (req,res) => {
     db.Client.destroy({
       where: {
         id: req.body.id
@@ -52,7 +65,17 @@ module.exports = (app) => {
     })
   });
 
-  app.get('/edit/:id', (req, res) => {
+  app.post('/delete/equip/:id', (req,res) => {
+    db.Equipment.destroy({
+      where: {
+        id: req.body.id
+      }
+    }).then(dbDestroy => {
+      res.json(dbDestroy);
+    })
+  });
+
+  app.get('/edit/client/:id', (req, res) => {
     db.Client.findOne({
       where: {
         id: req.params.id
@@ -61,6 +84,19 @@ module.exports = (app) => {
       res.render('edit_client', {
         layout: false,
         client: dbClient
+      })
+    })
+  })
+
+  app.get('/edit/equip/:id', (req, res) => {
+    db.Equipment.findOne({
+      where: {
+        id: req.params.id
+      }
+    }).then((dbEquip) => {
+      res.render('edit_equip', {
+        layout: false,
+        equip: dbEquip
       })
     })
   })
@@ -124,8 +160,12 @@ module.exports = (app) => {
   });
   
   app.get('/admin/equipment', (req, res) => {
-    res.render('manage_equipment', {
-      layout: false
-    });
+    db.Equipment.findAll({})
+    .then(dbEquip => {
+      res.render('manage_equipment', {
+        layout: false,
+        equipment: dbEquip
+      })
+    });    
   });
 };

@@ -42,6 +42,20 @@
     color: #ffc600 !important;
 }
 
+.equip-container {
+    margin-top: 24px;
+}
+
+.delete-equip {
+    cursor: pointer !important;
+    color: #bd2031 !important;
+}
+
+.edit-equip {
+    cursor: pointer !important;
+    color: #ffc600 !important;
+}
+
 .sound-client {
     cursor: pointer !important;
     color: #5bc0de;
