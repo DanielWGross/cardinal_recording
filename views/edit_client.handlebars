@@ -27,6 +27,8 @@
 			<div class="col-md-6 offset-md-3">
 				<form id="client">
 					<div class="form-group">
+						<label for="id">Client ID:</label>
+						<input value="{{client.id}}" type="text" class="form-control" id="id" readonly>
 						<label for="name">Client Name:</label>
 						<input value="{{client.name}}" type="text" class="form-control" id="name">
 						<br>
@@ -36,6 +38,7 @@
             <label for="soundcloud">SoundCloud URL:</label>
             <textarea id="soundcloud" class="form-control" rows="10">{{client.soundcloud_url}}</textarea>
 						<br />
+						<button class="btn btn-danger cancel">Cancel</button>
 						<button type="submit" class="btn btn-success submit">Submit</button>
 					</div>
 				</form>
@@ -43,7 +46,7 @@
 		</div>
 	</div>
 
-<script type="text/javascript" src="/js/adminClients.js"></script>
+<script type="text/javascript" src="/js/editClients.js"></script>
 </body>
 
 </html>

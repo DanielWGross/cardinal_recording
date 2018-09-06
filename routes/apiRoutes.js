@@ -27,13 +27,34 @@ module.exports = (app) => {
     });
   });
 
-  app.get('/delete/:id', (req, res) => {
+  app.post('/edit/:id', (req, res) => {
+    db.Client.update({
+      name: req.body.name,
+      picture_url: req.body.picture,
+      soundcloud_url: req.body.soundcloud
+    },
+    { 
+      where: {
+        id: req.params.id
+      }
+    })
+  });
+
+  app.post('/delete/:id', (req,res) => {
+    db.Client.destroy({
+      where: {
+        id: req.body.id
+      }
+    });
+  });
+
+  app.get('/edit/:id', (req, res) => {
     db.Client.findOne({
       where: {
         id: req.params.id
       }
     }).then((dbClient) => {
-      res.render('delete_client', {
+      res.render('edit_client', {
         layout: false,
         client: dbClient
       })
