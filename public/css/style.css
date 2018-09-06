@@ -1,4 +1,6 @@
-
+#soundcloud {
+    height: 150px;
+}
 
 .service-after {
     font-size: 12px;
@@ -36,6 +38,20 @@
 }
 
 .edit-client {
+    cursor: pointer !important;
+    color: #ffc600 !important;
+}
+
+.equip-container {
+    margin-top: 24px;
+}
+
+.delete-equip {
+    cursor: pointer !important;
+    color: #bd2031 !important;
+}
+
+.edit-equip {
     cursor: pointer !important;
     color: #ffc600 !important;
 }

@@ -1,12 +1,12 @@
 
 // Get references to page elements
-const deleteNodeList = document.querySelectorAll(".delete-client");
-const editNodeList = document.querySelectorAll(".edit-client");
+const deleteNodeList = document.querySelectorAll(".delete-equip");
+const editNodeList = document.querySelectorAll(".edit-equip");
 
 // The API object contains methods for each kind of request we will make.
   const API = {
     postAPI: function(id) {
-      return fetch( `/delete/client/${id}`, {
+      return fetch( `/delete/equip/${id}`, {
         method: "POST",
         headers: {
           'Accept': 'application/json',
@@ -34,6 +34,6 @@ Array.from(editNodeList).forEach(button => {
   button.addEventListener("click", () => {
     // Console Log the ID in the database
     const editID = button.parentElement.parentElement.dataset.id;
-    window.location.href = `/edit/client/${editID}`;
+    window.location.href = `/edit/equip/${editID}`;
   });
 });
