@@ -45,11 +45,12 @@
 	///////////////////////////
 	// On Scroll
 	$(window).on('scroll', function() {
+		const viewportHeight = (Math.max(document.documentElement.clientHeight, window.innerHeight || 0) * 0.70);
 		var wScroll = $(this).scrollTop();
 
 		// Fixed nav
-		wScroll <= 599 ? $('#nav').addClass('fixed-tweak') : $('#nav').removeClass('fixed-tweak');
-		wScroll > 599 ? $('#nav').addClass('fixed-nav') : $('#nav').removeClass('fixed-nav');
+		wScroll <= viewportHeight ? $('#nav').addClass('fixed-tweak') : $('#nav').removeClass('fixed-tweak');
+		wScroll > viewportHeight ? $('#nav').addClass('fixed-nav') : $('#nav').removeClass('fixed-nav');
 
 
 		// Back To Top Appear
