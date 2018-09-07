@@ -13,13 +13,12 @@ module.exports = (app) => {
   app.get('/:page', (req, res) => {
     const page = req.params.page;
     switch(page) {
-      case ('services'):
-        return res.render('services');
       case ('equipment'):
         return db.Equipment.findAll({
           raw: true
         }).then((equipment) => {
           res.render('equipment', {
+            layout: "subpage.handlebars",
             equipment: equipment
           });
         });
@@ -33,7 +32,9 @@ module.exports = (app) => {
           });
         });
       case ('contact'):
-        return res.render('contact');
+        return res.render('contact', {
+          layout: "subpage.handlebars"
+        });
       default:
         return res.render('404', {layout: false})
     }
