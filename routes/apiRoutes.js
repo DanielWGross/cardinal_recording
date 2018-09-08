@@ -27,7 +27,7 @@ module.exports = (app) => {
     });
   });
 
-  app.post('/edit/client/:id', (req, res) => {
+  app.post('/edit/client/:id', authCheck,  (req, res) => {
     db.Client.update({
       name: req.body.name,
       picture_url: req.body.picture,
@@ -42,7 +42,7 @@ module.exports = (app) => {
     })
   });
 
-  app.post('/edit/equip/:id', (req, res) => {
+  app.post('/edit/equip/:id', authCheck, (req, res) => {
     db.Equipment.update({
       name: req.body.name,
     },
@@ -55,7 +55,7 @@ module.exports = (app) => {
     })
   });
 
-  app.post('/delete/client/:id', (req,res) => {
+  app.post('/delete/client/:id', authCheck, (req,res) => {
     db.Client.destroy({
       where: {
         id: req.body.id
@@ -65,7 +65,7 @@ module.exports = (app) => {
     })
   });
 
-  app.post('/delete/equip/:id', (req,res) => {
+  app.post('/delete/equip/:id', authCheck, (req,res) => {
     db.Equipment.destroy({
       where: {
         id: req.body.id
@@ -75,7 +75,7 @@ module.exports = (app) => {
     })
   });
 
-  app.get('/edit/client/:id', (req, res) => {
+  app.get('/edit/client/:id', authCheck, (req, res) => {
     db.Client.findOne({
       where: {
         id: req.params.id
@@ -88,7 +88,7 @@ module.exports = (app) => {
     })
   })
 
-  app.get('/edit/equip/:id', (req, res) => {
+  app.get('/edit/equip/:id', authCheck, (req, res) => {
     db.Equipment.findOne({
       where: {
         id: req.params.id
@@ -102,7 +102,7 @@ module.exports = (app) => {
   })
 
   // GET All Equipment
-  app.get('/api/equipment', (req, res) => {
+  app.get('/api/equipment', authCheck, (req, res) => {
     db.Equipment.findAll({
     }).then((dbEquipment) => {
       res.json(dbEquipment);
@@ -149,7 +149,7 @@ module.exports = (app) => {
     res.redirect('/');
   });
 
-  app.get('/admin/clients', (req, res) => {
+  app.get('/admin/clients', authCheck, (req, res) => {
     db.Client.findAll({})
     .then((dbClients) => {
       res.render('manage_clients', {
@@ -159,7 +159,7 @@ module.exports = (app) => {
     });
   });
   
-  app.get('/admin/equipment', (req, res) => {
+  app.get('/admin/equipment', authCheck, (req, res) => {
     db.Equipment.findAll({})
     .then(dbEquip => {
       res.render('manage_equipment', {
